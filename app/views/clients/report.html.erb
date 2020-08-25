@@ -1,0 +1,38 @@
+<html>
+<p id="notice"><%= notice %></p>
+<h2>Relatório de Clientes e Contatos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome Cliente</th>
+      <th scope="col">Nome Contato</th>
+      <th scope="col">Email do Contato</th>
+      <th scope="col">Telefone do Contato</th>
+      <th scope="col">Data Cadastro do Contato</th> 
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <% client.contacts.each_with_index do |contact, index| %>
+        <tr>
+          <% if index.zero? %>
+            <td rowspan="<%= client.contacts.count%>"><%= client.full_name %></td> 
+          <% end %>
+          <td><%= contact.full_name %></td> 
+          <td><%= contact.email %></td>
+          <td><%= contact.phone %></td>
+          <td><%= contact.created_at.strftime('%d/%m/%Y %H:%M') %></td> 
+        </tr>
+      <% end %>
+    <% end %>
+  
+ 
+  
+  </tbody>
+
+</table>
+<%= link_to 'Voltar', clients_path, class: "btn btn-secondary btn-sm active"  %></td> 
+</html>
+

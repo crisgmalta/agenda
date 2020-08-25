@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agenda</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <!-- Navigation -->
+ 
+  <nav class="navbar navbar-dark bg-dark">  
+
+    
+    <div class="container">
+        <%= image_tag("logo.png", width: 90) %>
+       <td><%=link_to 'Sair', destroy_user_session_path, :method => :delete  %></td>
+       </a> 
+    </div>
+  </nav>
+
+  <body>
+    <div class='container'>
+      <%= yield %>
+    </div>
+  </body>
+</html>
