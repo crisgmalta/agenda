@@ -10,30 +10,17 @@ Para configuar este projeto clone este repositorio e execute
 * rails db:create
 * rails db:migrate 
 * rails db:seed
-* rails s (API estará disponível na porta 3000)
-
-
-# para instalar bootstrap
-rake webpacker:install 
-
-# para instalar factory_bot
-gem install factory_bot
-
-# para instalar faker
-gem install faker
+* rake webpacker:install 
+* rails s (projeto disponível na porta 3000)
 
 
 # Como executar testes
 * rake spec
-* rails generate rspec:install
 * rspec spec/controllers
 * rspec spec/models
 
 
-
-=====================
-### C L I E N T E S
-=====================
+## CLIENTES
 
 #### listar todos os clientes: 
 http://localhost:3000
@@ -48,10 +35,8 @@ http://localhost:3000/clients/id_cliente/edit
 http://localhost:3000/clients/id_cliente
 
 
+## CONTATOS
 
-=====================
-### C O N T A T O S
-=====================
 
 #### listar todos os contato do cliente: 
 http://localhost:3000/clients/id_cliente/contacts
@@ -69,18 +54,16 @@ http://localhost:3000/clients/id_cliente/contacts/id_contato/edit
 http://localhost:3000/clients/id_cliente/contacts/id_contato
 
 
+## USERS
 
-=====================
-### U S E R S
-=====================
+Login
 http://localhost:3000/users/sign_in
 
 
 
-=====================
-### R E P O R T
-=====================
-# Como gerar relatorio 
+### REPORT
+
+# Como gerar relatório Clientes e Contatos
 http://localhost:3000/clients/report
 
 
